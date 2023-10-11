@@ -67,7 +67,7 @@ li {
 
 .main_container{
     background: linear-gradient(#2f2fa2,#080a4b);
-    height: 86.6vh;
+    background-size: cover;
     display: flex;
     grid-template-columns: 1fr 1fr;
     align-items: center;
