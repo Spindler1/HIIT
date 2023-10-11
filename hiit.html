@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HIIT Clock</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar_container">
+            <h1 class="navbar_title">High Intensity Interval Training</h1>
+            <ul class="navbar_menu">
+                <li class="navbar_item">
+                    <a href="/" class="navbar__links"> HIIT </a>
+                </li>
+                <li class="navbar_item">
+                    <a href="/" class="navbar__links"> Tabata </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <nav class="main">
+        <div class="main_container">
+            <section class="left_column">
+                <h2>HIIT Parameters</h2><br><br>
+                <div class="field_sections">
+                    <ul id="firstInputs" class="forms">
+                        <li>
+                            <label for="rounds">Rounds</label>
+                            <input class="fields" type="number" id="rounds" name="fav_language" min="0" max="25">
+                        </li>
+                        <li>
+                            <label for="tabatas">Tabatas</label>
+                            <input class="fields" type="number" id="tabatas" name="fav_language" min="0">
+                        </li>
+                    </ul>
+                </div>
+                <div class="field_sections">
+                    <h3>Exercise Time</h3>
+                    <ul id="secondInputs" class="forms">
+                        <li>
+                            <label for="time_on__min">Minutes</label>
+                            <input class="fields" type="number" id="time_on__min" name="fav_language" min="0">
+                        </li>
+                        <li>
+                            <label for="time_on__sec">Seconds</label>
+                            <input class="fields" type="number" id="time_on__sec" name="fav_language" min="0" max="59">
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="field_sections">
+                    <h3>Rest Time</h3>
+                    <ul id="thirdInputs" class="forms">
+                        <li>
+                            <label for="time_off__min">Minutes</label>
+                            <input class="fields" type="number" id="time_off__min" name="fav_language" min="0">
+                        </li>
+                        <li>
+                            <label for="time_off__sec">Seconds</label>
+                            <input class="fields" type="number" id="time_off__sec" name="fav_language" min="0" max="59">
+                        </li>
+                    </ul>
+                </div>
+                <button id="submission">Start Timer</button><br>
+                <button id="reset" onClick="window.location.reload()">Reset</button>
+            </section>
+
+            <section class="right_column">
+                <div id="app"></div>
+            </section>
+        </div>
+    </nav>
+    <script src="script.js"></script>
+</body>
+
+</html>
