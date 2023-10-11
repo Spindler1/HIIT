@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Kumbh Sans', sans-serif;
+    
     /* background: #f1faee; */
 }
 
@@ -23,7 +24,7 @@
     justify-content: space-between;
     width: 100%;
     background-color: transparent;
-    max-width: 1500px;
+    max-width: 2000px;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -66,12 +67,14 @@ li {
 }
 
 .main_container{
-    background: linear-gradient(#2f2fa2,#080a4b);
-    background-size: cover;
     display: flex;
-    grid-template-columns: 1fr 1fr;
+    /* border: gray solid 3px; */
+    height: 1094px;
+    background: linear-gradient(#2f2fa2,#080a4b);
+    background-size: auto;
+    /* grid-template-columns: 1fr 1fr; */
     align-items: center;
-    justify-content: space-between;
+    /* justify-content: space-evenly; */
     /* height: 65vh; */
 }
 
@@ -80,13 +83,13 @@ li {
     justify-items: center;
     justify-content: space-between;
     height: 100%;
-    width: 800px;
+    width: 50%;
     position: relative;
-    padding-top: 80px;
-    /* border: gray solid 3px; */
+    padding-top: 10%;
+    padding-left: 5%;
 }
 #submission {
-    margin-left: 40.5%;
+    margin-left: 33.5%;
     font-size: 1rem;
     background: #e76f51;
     padding: 14px 32px;
@@ -109,7 +112,7 @@ li {
 }
 
 #reset {
-    margin-left: 42.9%;
+    margin-left: 35.03%;
     font-size: 1rem;
     background: #e76f51;
     padding: 14px 32px;
@@ -125,15 +128,16 @@ li {
 
 #reset:hover {
     color: #fff;
-    position: absolute;
+    /* position: absolute; */
     content: '';
     background: #2a9d8f;
     transition: ease 0.5s;
     border-radius: 4px;
 }
 
-h2 {
+h2{
     text-align: center;
+    width: 80%;
     font-size: 40px;
     font-weight: bold;
     color: #f64c72;
@@ -141,6 +145,8 @@ h2 {
 
 h3 {
     text-align: center;
+    margin-top: 5%;
+    width: 80%;
     font-size: 25px;
     color: #f64c72;
 }
@@ -205,8 +211,9 @@ input[type="number"] {
 
 .right_column {
     height: 100%;
-    width: 800px;
-    /* border: gray solid 3px; */
+    width: 50%;
+    padding-top: 8%;
+    padding-right: 10%;
 }
 
 /* TESTING CLOCK LOOK */
