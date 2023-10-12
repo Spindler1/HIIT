@@ -36,8 +36,10 @@ let remainingPathColor = COLOR_CODES.info.color;
 let exercise = true;
 let work = 0;
 let rest = 0;
+let rounds = 0;
 let isGreen = true;
 let started = false;
+let roundsFinished = 0;
 
 
 
@@ -59,6 +61,8 @@ function exerciseClock() {
 
   work = ((HIIT.emin * 60) + HIIT.esec);
   rest = ((HIIT.rmin * 60) + HIIT.rsec);
+  rounds = HIIT.rounds * HIIT.tabatas;
+  console.log("This is the round counter: " + rounds);
 
   WARNING_THRESHOLD = TIME_LIMIT / 2;
   ALERT_THRESHOLD = TIME_LIMIT / 4;
@@ -122,7 +126,7 @@ submit.addEventListener('click', function() {
 
 document.getElementById("app").innerHTML = `
 <div class="base-timer">
-  <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <svg class="base-timer__svg" viewBox="0 0 100 100">
     <g class="base-timer__circle">
       <circle class="base-timer__path-elapsed" cx="50" cy="50" r="45"></circle>
       <path
@@ -138,12 +142,14 @@ document.getElementById("app").innerHTML = `
       ></path>
     </g>
   </svg>
-  <span id="base-timer-label" class="base-timer__label">${formatTime(
-    timeLeft
-  )}</span>
+  <span id="base-timer-label" class="base-timer__label">${formatTime(timeLeft)}</span>
+  <p id="roundsCount"></p>
 </div>
 `;
 
+function printRounds() {
+  return `${roundsFinished}/${rounds}`;
+}
 
 function onTimesUp() {
   clearInterval(timerInterval);
@@ -229,6 +235,7 @@ function setRemainingPathColor(timeLeft) {
     .getElementById("base-timer-path-remaining")
      .classList.add("green");
   isGreen = true; console.log("Turned Green");
+  roundsFinished++;
   }
 }
 
@@ -245,3 +252,6 @@ function setCircleDasharray() {
     .getElementById("base-timer-path-remaining")
     .setAttribute("stroke-dasharray", circleDasharray);
 }
+
+// document.getElementById("roundsCount").innerHTML = `
+//   ${printRounds()}`;
